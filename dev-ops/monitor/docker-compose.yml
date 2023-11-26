@@ -1,4 +1,5 @@
 version: '3'
+# 执行脚本；docker-compose -f docker-compose.yml up -d
 # 拷贝配置；docker container cp grafana:/etc/grafana/ ./docs/dev-ops/
 services:
   # 数据采集
