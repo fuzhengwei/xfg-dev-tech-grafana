@@ -29,7 +29,7 @@ public class Application {
      * curl http://localhost:8091/api/hystrix/query_order_info
      */
     @HystrixCommand(commandProperties = {
-            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "500")
+            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "550")
     }, fallbackMethod = "queryOrderInfo_error"
     )
     @RequestMapping(value = "query_order_info", method = RequestMethod.GET)
@@ -63,7 +63,7 @@ public class Application {
             for (int i = 0; i < 200; i++) {
                 try {
                     emitter.send("hi xfg-dev-tech-grafana\r\n" + i);
-                    Thread.sleep(150);
+                    Thread.sleep(250);
                 } catch (Exception e) {
                     throw new RuntimeException(e);
                 }
