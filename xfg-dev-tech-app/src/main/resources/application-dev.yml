@@ -4,6 +4,7 @@ server:
   tomcat:
     mbeanregistry:
       enabled: true
+    max-connections: 20
     threads:
       max: 20         # 设定处理客户请求的线程的最大数目，决定了服务器可以同时响应客户请求的数,默认200
       min-spare: 10   # 初始化线程数,最小空闲线程数,默认是10
